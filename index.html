@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>精美简历生成器</title>
+
+    <script src="./themes-list.js" defer></script>
+    <!-- -------- themes list begin -------- -->
+    <link href="./themes/simple.css" rel="stylesheet" />
+    <link href="./themes/mung.css" rel="stylesheet" />
+    <link href="./themes/beryl.css" rel="stylesheet" />
+    <!-- -------- themes list end -------- -->
+
+    <script src="./resume/resume-json-zh.js"></script>
+    <script src="./resume/resume-json-en.js"></script>
+    <script src="./resume-create.js" defer></script>
+
+    <link href="./index.css" rel="stylesheet" />
+    <script src="./config.js" defer></script>
+    <script src="./index.js" defer></script>
+</head>
+
+<body>
+    <div id="themes" class="themes no-print">
+        <div class="themes-title">样式</div>
+        <!-- <div class="theme"></div> -->
+        <!-- ... -->
+    </div>
+    <div id="language" class="language no-print">
+        <div id="lang-zh" class="lang-zh"><img src="./icons/nx-json-resume-zh.png"></div>
+        <div id="lang-en" class="lang-en"><img src="./icons/nx-json-resume-en.png"></div>
+    </div>
+    <div id="toolbar" class="toolbar no-print">
+        <div id="tool-sync" class="tool-sync"><img src="./icons/nx-json-resume-sync.png"></div>
+        <div id="tool-print" class="tool-print"><img src="./icons/nx-json-resume-printer.png"></div>
+    </div>
+    <div id="resume" class="resume">
+        <!-- <div class="page" theme=""></div> -->
+        <!-- ... -->
+    </div>
+    <div id="source" class="source no-print">
+        <a href="//github.com/NaisuXu" target="_blank">Made by NaisuXu</a><br>
+        <a href="//github.com/NaisuXu/Nice_Resume_Builder" target="_blank">View on GitHub</a>
+    </div>
+</body>
+
+</html>

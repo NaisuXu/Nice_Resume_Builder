@@ -1,0 +1,170 @@
+.page[theme="beryl"] * {
+    user-select: text;
+    color: #333344;
+    font-size: 14px;
+    line-height: 1.6;
+    overflow-wrap: break-word;
+}
+
+.page[theme="beryl"] a {
+    text-decoration-color: #008117;
+}
+
+.page[theme="beryl"] {
+    width: 794px;
+    background: #ffffff;
+    padding: 72px;
+    margin-bottom: 32px;
+    
+    border-radius: 4px;
+    box-shadow: 0px 4px 8px #d0d0d0;
+
+    position: relative;
+}
+
+/* 以下是页眉页脚样式 */
+
+.page[theme="beryl"]>header,
+footer {
+    position: absolute;
+}
+
+.page[theme="beryl"]>header {
+    top: 28px;
+    right: 72px;
+}
+
+.page[theme="beryl"]>footer {
+    bottom: 28px;
+    left: 397px;
+    transform: translate(-50%, 0);
+}
+
+.page[theme="beryl"]>footer>div::before {
+    content: "- ";
+}
+
+.page[theme="beryl"]>footer>div::after {
+    content: " -";
+}
+
+/* 以下是基本信息式 */
+
+.page[theme="beryl"]>.head {
+    width: 100%;
+    display: grid;
+    grid-template-columns: auto 1fr auto;
+    grid-column-gap: 16px;
+    margin-bottom: 32px;
+}
+
+.page[theme="beryl"]>.head>div>.name {
+    font-size: 36px;
+    font-weight: bold;
+}
+
+.page[theme="beryl"]>.head>div>.occupation {
+    font-size: 18px;
+}
+
+.page[theme="beryl"]>.head>.information {
+    display: flex;
+    flex-direction: column;
+}
+
+.page[theme="beryl"]>.head>.information>.label {
+    display: flex;
+    justify-content: flex-end;
+    margin-bottom: 8px;
+}
+
+.page[theme="beryl"]>.head>.information>.label>.icon {
+    width: 18px;
+    height: 22px;
+    object-fit: contain;
+    margin-right: 8px;
+}
+
+.page[theme="beryl"]>.head>.information>.label>.tag {
+    margin-right: 8px;
+    font-weight: bold;
+}
+
+.page[theme="beryl"]>.head>.portrait {
+    /* 48mm x 33mm */
+    height: 182px;
+    width: 125px;
+    object-fit: contain;
+}
+
+.page[theme="beryl"]>.head>.portrait:not([src]) {
+    width: 0;
+    opacity: 0;
+}
+
+/* 以下是详细信息式 */
+
+.page[theme="beryl"]>.main {
+    margin-bottom: 36px;
+}
+
+.page[theme="beryl"]>.main>.mainhead {
+    display: flex;
+    margin-bottom: 8px;
+    background: #497089;
+    padding-left: 16px;
+    border-radius: 8px;
+}
+
+.page[theme="beryl"]>.main>.mainhead>.icon {
+    display: none;
+}
+
+.page[theme="beryl"]>.main>.mainhead>.t1 {
+    font-size: 24px;
+    font-weight: bold;
+    color: #ffffff;
+}
+
+.page[theme="beryl"]>.main>.subhead {
+    display: grid;
+    grid-template-columns: 1fr auto;
+}
+
+.page[theme="beryl"]>.main>.subhead>.t2 {
+    font-size: 16px;
+    font-weight: bold;
+    color: #008117;
+}
+
+.page[theme="beryl"]>.main>.subhead>.time {
+    font-weight: bold;
+    color: #008117;
+}
+
+.page[theme="beryl"]>.main>.subhead>.note {
+    font-weight: bold;
+    color: #555555;
+}
+
+.page[theme="beryl"]>.main>ol,
+ul {
+    padding-left: 20px;
+}
+
+.page[theme="beryl"]>.main>.contents {
+    margin-bottom: 8px;
+}
+
+/* 以下是打印样式处理 */
+
+@media print {
+    .page[theme="beryl"] * {
+        color: #000000;
+    }
+
+    .page[theme="beryl"] {
+        border-radius: 0;
+        box-shadow: none;
+    }
+}

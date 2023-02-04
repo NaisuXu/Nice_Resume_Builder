@@ -1,0 +1,204 @@
+.page[theme="mung"] * {
+    user-select: text;
+    color: #606060;
+    font-size: 14px;
+    line-height: 1.6;
+    overflow-wrap: break-word;
+}
+
+.page[theme="mung"] {
+    width: 794px;
+    background: #F1EEE8;
+    padding: 72px;
+    margin-bottom: 32px;
+    
+    border-radius: 4px;
+    box-shadow: 0px 4px 8px #d0d0d0;
+
+    position: relative;
+}
+
+/* 以下是页眉页脚样式 */
+
+.page[theme="mung"]>header,
+footer {
+    position: absolute;
+}
+
+.page[theme="mung"]>header {
+    top: 28px;
+    left: 397px;
+    transform: translate(-50%, 0);
+}
+
+.page[theme="mung"]>footer {
+    bottom: 28px;
+    left: 397px;
+    transform: translate(-50%, 0);
+}
+
+.page[theme="mung"]>footer>div::before {
+    content: "- ";
+}
+
+.page[theme="mung"]>footer>div::after {
+    content: " -";
+}
+
+/* 以下是基本信息式 */
+
+.page[theme="mung"]>.head {
+    width: 100%;
+    display: grid;
+    grid-template-columns: auto 1fr auto;
+    grid-column-gap: 16px;
+    margin-bottom: 32px;
+    position: relative;
+    z-index: 0;
+}
+
+.page[theme="mung"]>.head::before {
+    content: '';
+    position: absolute;
+    z-index: -1;
+    top: -72px;
+    left: -72px;
+    width: calc(100% + 72px + 72px);
+    height: calc(100% + 72px);
+    background: #5DC3B0;
+}
+
+.page[theme="mung"]>.head a {
+    text-decoration-color: #F1EEE8;
+}
+
+.page[theme="mung"]>.head>div>.name {
+    font-size: 36px;
+    font-weight: bold;
+    color: #F1EEE8;
+}
+
+.page[theme="mung"]>.head>div>.occupation {
+    font-size: 18px;
+    color: #1D7D71;
+    font-weight: bold;
+}
+
+.page[theme="mung"]>.head>.information {
+    display: flex;
+    flex-direction: column;
+}
+
+.page[theme="mung"]>.head>.information>.label {
+    display: flex;
+    justify-content: flex-end;
+    margin-bottom: 8px;
+}
+
+.page[theme="mung"]>.head>.information>.label>.icon {
+    width: 18px;
+    height: 22px;
+    object-fit: contain;
+    margin-right: 8px;
+    opacity: 0.6;
+}
+
+.page[theme="mung"]>.head>.information>.label>.tag {
+    margin-right: 8px;
+    color: #1D7D71;
+    font-weight: bold;
+}
+
+.page[theme="mung"]>.head>.information>.label>.msg,
+.page[theme="mung"]>.head>.information>.label>.msg * {
+    color: #F1EEE8;
+    font-weight: bold;
+}
+
+.page[theme="mung"]>.head>.portrait {
+    /* 48mm x 33mm */
+    height: 182px;
+    width: 125px;
+    object-fit: contain;
+}
+
+.page[theme="mung"]>.head>.portrait:not([src]) {
+    width: 0;
+    opacity: 0;
+}
+
+/* 以下是详细信息式 */
+
+.page[theme="mung"]>.main {
+    margin-bottom: 36px;
+}
+
+.page[theme="mung"]>.main a {
+    text-decoration-color: #5DC3B0;
+}
+
+
+.page[theme="mung"]>.main>.mainhead {
+    display: flex;
+    border-bottom: 1px solid #5DC3B0;
+    margin-bottom: 8px;
+}
+
+.page[theme="mung"]>.main>.mainhead>.icon {
+    width: 30px;
+    height: 38px;
+    object-fit: contain;
+    margin-right: 8px;
+    opacity: 0.7;
+}
+
+.page[theme="mung"]>.main>.mainhead>.t1 {
+    font-size: 24px;
+    font-weight: bold;
+    color: #6B6B6B;
+}
+
+.page[theme="mung"]>.main>.subhead {
+    display: grid;
+    grid-template-columns: 1fr auto;
+}
+
+.page[theme="mung"]>.main>.subhead>.t2 {
+    font-size: 16px;
+    font-weight: bold;
+    color: #5DC3B0;
+}
+
+.page[theme="mung"]>.main>.subhead>.time {
+    font-weight: bold;
+    background: #5DC3B0;;
+    color: #F1EEE8;
+    line-height: 25px;
+    padding: 0px 8px;
+}
+
+.page[theme="mung"]>.main>.subhead>.time:empty {
+    opacity: 0;
+}
+
+.page[theme="mung"]>.main>.subhead>.note {
+    font-weight: bold;
+}
+
+.page[theme="mung"]>.main>ol,
+ul {
+    padding-left: 20px;
+}
+
+.page[theme="mung"]>.main>.contents {
+    margin-bottom: 8px;
+}
+
+/* 以下是打印样式处理 */
+
+@media print {
+    .page[theme="mung"] {
+        border-radius: 0;
+        box-shadow: none;
+    }
+}

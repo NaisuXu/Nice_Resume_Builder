@@ -1,0 +1,165 @@
+.page[theme="simple"] * {
+    user-select: text;
+    color: #333344;
+    font-size: 14px;
+    line-height: 1.6;
+    overflow-wrap: break-word;
+}
+
+.page[theme="simple"] a {
+    text-decoration-color: #e0e0e8;
+}
+
+.page[theme="simple"] {
+    width: 794px;
+    background: #ffffff;
+    padding: 72px;
+    margin-bottom: 32px;
+    
+    border-radius: 4px;
+    box-shadow: 0px 4px 8px #d0d0d0;
+
+    position: relative;
+}
+
+/* 以下是页眉页脚样式 */
+
+.page[theme="simple"]>header,
+footer {
+    position: absolute;
+}
+
+.page[theme="simple"]>header {
+    top: 28px;
+    right: 72px;
+}
+
+.page[theme="simple"]>footer {
+    bottom: 28px;
+    left: 397px;
+    transform: translate(-50%, 0);
+}
+
+.page[theme="simple"]>footer>div::before {
+    content: "- ";
+}
+
+.page[theme="simple"]>footer>div::after {
+    content: " -";
+}
+
+/* 以下是基本信息式 */
+
+.page[theme="simple"]>.head {
+    width: 100%;
+    display: grid;
+    grid-template-columns: auto 1fr auto;
+    grid-column-gap: 16px;
+    margin-bottom: 32px;
+}
+
+.page[theme="simple"]>.head>div>.name {
+    font-size: 36px;
+    font-weight: bold;
+}
+
+.page[theme="simple"]>.head>div>.occupation {
+    font-size: 18px;
+}
+
+.page[theme="simple"]>.head>.information {
+    display: flex;
+    flex-direction: column;
+}
+
+.page[theme="simple"]>.head>.information>.label {
+    display: flex;
+    justify-content: flex-end;
+    margin-bottom: 8px;
+}
+
+.page[theme="simple"]>.head>.information>.label>.icon {
+    width: 18px;
+    height: 22px;
+    object-fit: contain;
+    margin-right: 8px;
+}
+
+.page[theme="simple"]>.head>.information>.label>.tag {
+    margin-right: 8px;
+    font-weight: bold;
+}
+
+.page[theme="simple"]>.head>.portrait {
+    /* 48mm x 33mm */
+    height: 182px;
+    width: 125px;
+    object-fit: contain;
+}
+
+.page[theme="simple"]>.head>.portrait:not([src]) {
+    width: 0;
+    opacity: 0;
+}
+
+/* 以下是详细信息式 */
+
+.page[theme="simple"]>.main {
+    margin-bottom: 36px;
+}
+
+.page[theme="simple"]>.main>.mainhead {
+    display: flex;
+    border-bottom: 1px solid #e0e0e8;
+    margin-bottom: 8px;
+}
+
+.page[theme="simple"]>.main>.mainhead>.icon {
+    width: 30px;
+    height: 38px;
+    object-fit: contain;
+    margin-right: 8px;
+}
+
+.page[theme="simple"]>.main>.mainhead>.t1 {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.page[theme="simple"]>.main>.subhead {
+    display: grid;
+    grid-template-columns: 1fr auto;
+}
+
+.page[theme="simple"]>.main>.subhead>.t2 {
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.page[theme="simple"]>.main>.subhead>.time,
+.page[theme="simple"]>.main>.subhead>.note {
+    font-weight: bold;
+    color: #808080;
+}
+
+.page[theme="simple"]>.main>ol,
+ul {
+    padding-left: 20px;
+}
+
+.page[theme="simple"]>.main>.contents {
+    margin-bottom: 8px;
+}
+
+/* 以下是打印样式处理 */
+
+@media print {
+    .page[theme="simple"] * {
+        color: #000000;
+    }
+
+    .page[theme="simple"] {
+        border-radius: 0;
+        box-shadow: none;
+    }
+}
