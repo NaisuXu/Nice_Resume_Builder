@@ -1,0 +1,175 @@
+.page[theme="pewter"] * {
+    user-select: text;
+    color: #333344;
+    font-size: 14px;
+    line-height: 1.6;
+    overflow-wrap: break-word;
+}
+
+.page[theme="pewter"] a {
+    text-decoration-color: #1393CA;
+}
+
+.page[theme="pewter"] {
+    width: 794px;
+    background: #E3E3E3;
+    padding: 72px;
+    margin-bottom: 32px;
+    
+    border-radius: 4px;
+    box-shadow: 0px 4px 8px #d0d0d0;
+
+    position: relative;
+}
+
+/* 以下是页眉页脚样式 */
+
+.page[theme="pewter"]>header,
+footer {
+    position: absolute;
+}
+
+.page[theme="pewter"]>header *,
+.page[theme="pewter"]>footer *{
+    color: #4488aa;
+}
+
+
+.page[theme="pewter"]>header {
+    top: 28px;
+    right: 72px;
+}
+
+.page[theme="pewter"]>footer {
+    bottom: 28px;
+    left: 397px;
+    transform: translate(-50%, 0);
+}
+
+.page[theme="pewter"]>footer>div::before {
+    content: "- ";
+}
+
+.page[theme="pewter"]>footer>div::after {
+    content: " -";
+}
+
+/* 以下是基本信息式 */
+
+.page[theme="pewter"]>.head {
+    width: 100%;
+    display: grid;
+    grid-template-columns: auto 1fr auto;
+    grid-column-gap: 16px;
+    margin-bottom: 32px;
+}
+
+.page[theme="pewter"]>.head>div>.name {
+    font-size: 36px;
+    font-weight: bold;
+    color: #1393CA;
+}
+
+.page[theme="pewter"]>.head>div>.occupation {
+    font-size: 18px;
+}
+
+.page[theme="pewter"]>.head>.information {
+    display: flex;
+    flex-direction: column;
+}
+
+.page[theme="pewter"]>.head>.information>.label {
+    display: flex;
+    justify-content: flex-end;
+    margin-bottom: 8px;
+}
+
+.page[theme="pewter"]>.head>.information>.label>.icon {
+    width: 18px;
+    height: 22px;
+    object-fit: contain;
+    margin-right: 8px;
+}
+
+.page[theme="pewter"]>.head>.information>.label>.tag {
+    margin-right: 8px;
+    font-weight: bold;
+}
+
+.page[theme="pewter"]>.head>.portrait {
+    /* 48mm x 33mm */
+    height: 182px;
+    width: 125px;
+    object-fit: contain;
+}
+
+.page[theme="pewter"]>.head>.portrait:not([src]) {
+    width: 0;
+    opacity: 0;
+}
+
+/* 以下是详细信息式 */
+
+.page[theme="pewter"]>.main {
+    margin-bottom: 36px;
+    background: #EEEEEE;
+    padding: 8px 16px;
+}
+
+.page[theme="pewter"]>.main>.mainhead {
+    display: flex;
+    border-bottom: 1px solid #e0e0e8;
+    margin-bottom: 8px;
+}
+
+.page[theme="pewter"]>.main>.mainhead>.icon {
+    width: 30px;
+    height: 38px;
+    object-fit: contain;
+    margin-right: 8px;
+}
+
+.page[theme="pewter"]>.main>.mainhead>.t1 {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.page[theme="pewter"]>.main>.subhead {
+    display: grid;
+    grid-template-columns: 1fr auto;
+}
+
+.page[theme="pewter"]>.main>.subhead>.t2 {
+    font-size: 16px;
+    font-weight: bold;
+    color: #1393CA;
+}
+
+.page[theme="pewter"]>.main>.subhead>.time,
+.page[theme="pewter"]>.main>.subhead>.note {
+    font-weight: bold;
+    color: #808080;
+}
+
+.page[theme="pewter"]>.main>ol,
+ul {
+    padding-left: 20px;
+}
+
+.page[theme="pewter"]>.main>.contents {
+    margin-bottom: 8px;
+}
+
+/* 以下是打印样式处理 */
+
+@media print {
+    .page[theme="pewter"] * {
+        color: #000000;
+    }
+
+    .page[theme="pewter"] {
+        border-radius: 0;
+        box-shadow: none;
+    }
+}

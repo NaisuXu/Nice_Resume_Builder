@@ -1,5 +1,6 @@
 const themesList = [
     "simple",
     "mung",
-    "beryl"
+    "beryl",
+    "pewter"
 ];
