@@ -10,10 +10,14 @@ states.resume.theme = config.default.theme;
 states.resume.language = config.default.language;
 
 if (window.name !== '') {
-    let old = JSON.parse(window.name);
-    if (((old?.resume?.theme || '') !== '') && (((old?.resume?.language || '') !== ''))) {
-        states.resume.theme = old.resume.theme;
-        states.resume.language = old.resume.language;
+    try {
+        let old = JSON.parse(window.name);
+        if (((old?.resume?.theme || '') !== '') && (((old?.resume?.language || '') !== ''))) {
+            states.resume.theme = old.resume.theme;
+            states.resume.language = old.resume.language;
+        }  
+    } catch (error) {
+        console.log(error);
     }
 }
 
