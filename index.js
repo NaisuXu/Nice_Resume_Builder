@@ -25,8 +25,8 @@ const resume = document.querySelector('#resume');
 
 // 主题选择栏初始化
 const themes = document.querySelector('#themes');
-if (config.display.themes === false) {
-    themes.style.display = 'none';
+if (config.display.themes === true) {
+    themes.style.display = 'block';
 }
 
 const themesTitle = document.querySelector('#themes>.themes-title');
@@ -53,8 +53,8 @@ for (const theme of themesList) {
 
 // 语言选择栏初始化
 const language = document.querySelector('#language');
-if (config.display.language === false) {
-    language.style.display = 'none';
+if (config.display.language === true) {
+    language.style.display = 'block';
 }
 
 const btnLangZH = document.querySelector('#lang-zh');
@@ -76,16 +76,10 @@ btnLangEN.onclick = () => {
     resumeCreate(resume, resumeJsonEN, states.resume.theme);
 };
 
-if (states.resume.language === 'zh') {
-    btnLangZH.click();
-} else {
-    btnLangEN.click();
-}
-
 // 工具栏初始化
 const toolbar = document.querySelector('#toolbar');
-if (config.display.toolbar === false) {
-    toolbar.style.display = 'none';
+if (config.display.toolbar === true) {
+    toolbar.style.display = 'block';
 }
 
 document.querySelector('#tool-sync').onclick = () => {
@@ -99,3 +93,9 @@ document.querySelector('#tool-print').onclick = () => {
     window.print();
 };
 
+// 初次渲染简历信息
+if (states.resume.language === 'zh') {
+    btnLangZH.click();
+} else {
+    btnLangEN.click();
+}

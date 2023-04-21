@@ -28,8 +28,10 @@ body {
     border-radius: 24px;
 }
 
-.themes>.themes-title {
-    color: #666666;
+.themes,
+.language,
+.toolbar {
+    display: none;
 }
 
 .language {
@@ -69,6 +71,7 @@ body {
 
 .themes>.themes-title {
     font-size: 28px;
+    color: #666666;
 }
 
 .language>div>img,
