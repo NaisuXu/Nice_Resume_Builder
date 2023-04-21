@@ -65,7 +65,7 @@ const resumeJsonEN = {
             "title": "Expectation",
             "list": "div",
             "contents": [
-                "Embedded development, 35,000 RMB per month."
+                "Embedded development, X,XXX $ per month."
             ]
         },
         {

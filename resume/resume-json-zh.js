@@ -65,7 +65,7 @@ const resumeJsonZH = {
             "title": "求职期望",
             "list": "div",
             "contents": [
-                "嵌入式开发相关工作， 35,000 RMB 每月。"
+                "嵌入式开发相关工作， XX,000 RMB 每月。"
             ]
         },
         {

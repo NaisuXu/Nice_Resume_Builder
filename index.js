@@ -25,6 +25,8 @@ if (config.display.themes === false) {
     themes.style.display = 'none';
 }
 
+const themesTitle = document.querySelector('#themes>.themes-title');
+
 const themeArray = {};
 for (const theme of themesList) {
     const div = document.createElement('div');
@@ -56,6 +58,7 @@ const btnLangEN = document.querySelector('#lang-en');
 
 btnLangZH.onclick = () => {
     states.resume.language = 'zh';
+    themesTitle.innerText = '样式';
     btnLangZH.setAttribute('selected', 'true');
     btnLangEN.setAttribute('selected', 'false');
     resumeCreate(resume, resumeJsonZH, states.resume.theme);
@@ -63,6 +66,7 @@ btnLangZH.onclick = () => {
 
 btnLangEN.onclick = () => {
     states.resume.language = 'en';
+    themesTitle.innerText = 'style';
     btnLangZH.setAttribute('selected', 'false');
     btnLangEN.setAttribute('selected', 'true');
     resumeCreate(resume, resumeJsonEN, states.resume.theme);
