@@ -53,6 +53,8 @@ const resumeJsonEN = {
             "list": "ul", 
             "contents": [
                 // 你可以自行添加喜欢的条目, 这里的顺序就是渲染时的顺序
+                // 可以使用 "<img src='./resume/work1.png' style='width: 650px; height: 320px;'>", 来插入图片
+                // width和height字段分别用于控制图片在文档中的宽高
                 "I am an embedded engineer and have been engaged in relevant work for about ten years.",
                 "The daily work mainly focuses on the development of microcontroller and embedded linux. In addition, i also carry out the development of web back-end based on embedded devices, web front-end and user applications (Windows, Android).",
                 "I like to explore various technologies and be good at using appropriate technologies to achieve specific needs, so as to improve development efficiency and user experience.",

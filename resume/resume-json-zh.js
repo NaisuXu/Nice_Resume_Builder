@@ -53,6 +53,8 @@ const resumeJsonZH = {
             "list": "ul",
             "contents": [
                 // 你可以自行添加喜欢的条目, 这里的顺序就是渲染时的顺序
+                // 可以使用 "<img src='./resume/work1.png' style='width: 650px; height: 320px;'>", 来插入图片
+                // width和height字段分别用于控制图片在文档中的宽高
                 "我是一名嵌入式工程师，从事相关工作十年左右。",
                 "日常工作主要围绕单片机开发以及嵌入式Linux开发。此外工作中还进行基于嵌入式设备的Web后端开发，Web前端与用户应用程序（Windows、Android）开发。",
                 "我喜欢探索各种技术，善于使用合适的技术来实现特定的需求，以此提升开发效率与用户体验。",
